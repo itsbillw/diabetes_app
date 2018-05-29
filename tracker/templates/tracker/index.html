@@ -1,0 +1,36 @@
+{% extends "tracker/base.html" %}
+{% load bootstrap4 %}
+
+{% block jumbotronheader %}
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <div class="container">
+        <h3 class="display-3">Tracker</h3>
+    </div>
+</div>
+{% endblock jumbotronheader %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<main role="main" class="container" style="margin-top:30px">
+    <div class="my-3 p-3 bg-white rounded box-shadow">
+        <h6 class="border-bottom border-gray pb-2 mb-0">Recent topics</h6>
+        {% for topic in topics %}
+        <div class="media text-muted pt-3">
+            <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <strong class="d-block text-gray-dark">{{ user }}</strong>
+                <a href="{% url 'tracker:topic' topic.id %}">{{ topic }}</a>
+            </p>
+        </div>
+        {% empty %}
+        <li>No topics have been added yet.</li>
+        {% endfor %}
+        <div class="container">
+            <p></p>
+            <a href="{% url 'tracker:topics' %}">All Topics</a>
+        </div>
+    </div>
+</main>
+{% endblock content %}

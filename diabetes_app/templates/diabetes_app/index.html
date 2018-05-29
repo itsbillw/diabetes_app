@@ -1,0 +1,33 @@
+{% extends "diabetes_app/base.html" %}
+{% load bootstrap4 %}
+
+{% block jumbotronheader %}
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <div class="container">
+        <h3 class="display-3">Diabetes Tracker</h3>
+    </div>
+</div>
+{% endblock jumbotronheader %}
+
+{% block content %}
+<main role="main">
+    <div class="container" style="margin-top:30px">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Event Tracker</h2>
+                <p>Create a log by adding events to categories</p>
+                <p>*** User account required ***</p>
+                <p><a class="btn btn-secondary" href="{% url 'tracker:index' %}" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-md-6">
+                <h2>Register an account</h2>
+                <p>Register an account to make your own Learning Log, and list the topics you're learning about.</p>
+                <p>Whenever you learn something new about a topic, make an entry summarizing what you've learned.</p>
+                <p><a class="btn btn-secondary" href="{% url 'users:register' %}" role="button">View details &raquo;</a></p>
+            </div>
+        </div>
+        <hr>
+    </div><!-- /container -->
+</main>
+{% endblock %}

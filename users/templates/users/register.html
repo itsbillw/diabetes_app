@@ -1,0 +1,21 @@
+{% extends "diabetes_app/base.html" %}
+{% load bootstrap4 %}
+
+{% block jumbotronheader %}
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <h1 class="display-3">Registration Page</h1>
+    <p></p>
+</div>
+{% endblock jumbotronheader %}
+
+{% block content %}
+<div class="container" style="margin-top:30px">
+    <form method="post" action="{% url 'users:register' %}">
+        {% csrf_token %} {{ form.as_p }}
+
+        <button name="submit">register</button>
+        <input type="hidden" name="next" value="{% url 'tracker:index' %}" />
+    </form>
+</div>
+<br>
+{% endblock content %}
