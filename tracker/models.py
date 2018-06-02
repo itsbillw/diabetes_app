@@ -15,8 +15,8 @@ class Entry(models.Model):
     """Something specific about a topic"""
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
     text = models.TextField(null=True)
-    blood_sugar = models.IntegerField(null=True)
-    carbs = models.IntegerField(null=True)
+    blood_sugar = models.IntegerField(default=0)
+    carbs = models.IntegerField(default=0)
     date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:
