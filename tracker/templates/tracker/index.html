@@ -1,26 +1,22 @@
-{% extends "tracker/base.html" %}
-{% load bootstrap4 %}
-
-{% block jumbotronheader %}
-<div class="jumbotron text-center" style="margin-bottom:0">
-    <div class="container">
-        <h3 class="display-3">Tracker</h3>
-    </div>
-</div>
-{% endblock jumbotronheader %}
-
-{% block header %}
-{% endblock %}
+{% extends "tracker/base.html" %} 
+{% load bootstrap4 %} 
 
 {% block content %}
-<main role="main" class="container" style="margin-top:30px">
+<main role="main" class="container">
+    <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
+        <img class="mr-3" src="https://getbootstrap.com/assets/brand/bootstrap-outline.svg" alt="" width="48" height="48">
+        <div class="lh-100">
+            <h6 class="mb-0 text-white lh-100">Diabetes tracker</h6>
+            <small>Since 2007</small>
+        </div>
+    </div>
+
     <div class="my-3 p-3 bg-white rounded box-shadow">
-        <h6 class="border-bottom border-gray pb-2 mb-0">Recent topics</h6>
         {% for topic in topics %}
         <div class="media text-muted pt-3">
             <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                <strong class="d-block text-gray-dark">{{ user }}</strong>
+                <strong class="d-block text-gray-dark">@{{ user }}</strong>
                 <a href="{% url 'tracker:topic' topic.id %}">{{ topic }}</a>
             </p>
         </div>
@@ -28,6 +24,9 @@
         <li>No topics have been added yet.</li>
         {% endfor %}
         <div class="container">
+            <small class="d-block text-right mt-3">
+                    <a href="{% url 'tracker:new_topic' %}">Add new topic</a>
+            </small>
             <p></p>
             <a href="{% url 'tracker:topics' %}">All Topics</a>
         </div>

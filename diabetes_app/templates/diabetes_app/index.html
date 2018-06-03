@@ -1,12 +1,24 @@
-{% extends "diabetes_app/base.html" %}
-{% load bootstrap4 %}
+{% extends "diabetes_app/base.html" %} 
+{% load bootstrap4 %} 
+
+{% block header %}
+<a class="nav-link active" href="{% url 'index' %}">Home</a>
+<a class="nav-link" href="{% url 'info' %}">Info</a>
+<a class="nav-link" href="{% url 'tracker:index' %}">Tracker</a>
+{% endblock %}
 
 {% block content %}
 <main role="main" class="inner cover">
     <h1 class="cover-heading">Diabetes app</h1>
-    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+    <p class="lead">Take control and track blood sugars to try make diabetes suck a little less.</p>
     <p class="lead">
         <a href="{% url 'tracker:index' %}" class="btn btn-lg btn-secondary">Tracker</a>
     </p>
 </main>
+{% endblock %}
+
+{% block footer %}
+<div class="inner">
+    <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://github.com/itsbillw">@itsbillw</a>.</p>
+</div>
 {% endblock %}
