@@ -1,23 +1,24 @@
 {% extends "tracker/base.html" %}
 {% load bootstrap4 %}
 
-{% block header %}
-<div class="container" style="margin-top:30px">
-    <h2>Add a new topic:</h2>
-</div>
-{% endblock %}
-
 {% block content %}
-<div class="container" style="margin-top:30px">
-    <form action="{% url 'tracker:new_topic' %}" method='post' class="form">
-
-        {% csrf_token %}
-        {% bootstrap_form form %}
-
-        {% buttons %}
-        <button name="submit" class="btn btn-primary">add topic</button>
-        {% endbuttons %}
-
-    </form>
+<div class="main text-left">
+    <div class="container" style="margin-top:30px">
+        <h2>Add a new topic:</h2>
+    </div>
+    <div class="container" style="margin-top:30px">
+        <form action="{% url 'tracker:new_topic' %}" method='post'>
+            {% csrf_token %}
+             <table class="table table-sm">
+                 <tbody>
+                 {{ form.as_table }}
+                 </tbody>
+             </table>
+            {% buttons %}
+            <button name="submit" class="btn btn-primary">add topic</button>
+            <a href="{% url 'tracker:topics' %}">cancel</a>
+            {% endbuttons %}
+        </form>
+    </div>
 </div>
 {% endblock content %}

@@ -3,14 +3,14 @@
 
 {% block content %}
 <main role="main" class="container">
-    <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
-        <img class="mr-3" src="https://getbootstrap.com/assets/brand/bootstrap-outline.svg" alt="" width="48" height="48">
+    <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-primary rounded box-shadow">
+        <img class="mr-3" src="/static/tracker/images/diabetes.ico" alt="" width="48" height="48">
         <div class="lh-100">
             <h6 class="mb-0 text-white lh-100">Diabetes tracker</h6>
             <small>All Topics</small>
         </div>
     </div>
-    <div class="my-3 p-3 bg-white rounded box-shadow">
+    <div class="my-3 p-3 bg-white rounded box-shadow text-left">
         <div class="container">
             <small class="d-block text-right mt-3">
                 <a href="{% url 'tracker:new_topic' %}">Add new topic</a>

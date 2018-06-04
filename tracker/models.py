@@ -14,9 +14,11 @@ class Topic(models.Model):
 class Entry(models.Model):
     """Something specific about a topic"""
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
-    text = models.TextField(null=True)
-    blood_sugar = models.IntegerField(default=0)
-    carbs = models.IntegerField(default=0)
+    text = models.TextField(blank=True, null=True)
+    blood_sugar = models.IntegerField(blank=True, null=True)
+    carbs = models.IntegerField(blank=True, null=True)
+    insulin = models.IntegerField(blank=True, null=True)
+    insulin_type = models.CharField(blank=True, null=True, max_length=200)
     date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:

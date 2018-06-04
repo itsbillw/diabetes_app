@@ -1,42 +1,48 @@
-{% extends "tracker/base.html" %} 
-{% load bootstrap4 %} 
-
-{% block header %}
-<a class="nav-link" href="{% url 'index' %}">Home</a>
-<a class="nav-link" href="{% url 'info' %}">Info</a>
-<a class="nav-link active" href="{% url 'tracker:index' %}">Tracker</a>
-{% endblock %} 
+{% extends "tracker/base.html" %}
+{% load bootstrap4 %}
 
 {% block content %}
 <main role="main" class="container">
-    <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
-        <img class="mr-3" src="https://getbootstrap.com/assets/brand/bootstrap-outline.svg" alt="" width="48" height="48">
+    <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-primary rounded box-shadow text-left">
+        <img class="mr-3" src="/static/tracker/images/diabetes.ico" alt="" width="48" height="48">
         <div class="lh-100">
-            <h6 class="mb-0 text-white lh-100">{{ topic }}</h6>
+            <h3 class="mb-0 text-white lh-100">{{ topic }}</h3>
         </div>
     </div>
     <div class="my-3 p-3 bg-white rounded box-shadow">
-        <div class="container">
-            <small class="d-block text-right mt-3">
-                <a href="{% url 'tracker:new_entry' topic.id %}">add new entry</a>
-            </small>
-        </div>
-        {% for entry in entries %}
         <div class="media text-muted pt-3">
-            <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                <strong class="d-block text-gray-dark">{{ entry.date_added|date:'M d, Y H:i' }}</strong>
-                <a href="{% url 'tracker:topic' topic.id %}">Blood Sugar: {{ entry.blood_sugar }}</a>
+                <table class="table table-sm table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width: 12.5%"></th>
+                            <th style="width: 12.5%">Blood Sugar</th>
+                            <th style="width: 12.5%">Carbs</th>
+                            <th style="width: 12.5%">Insulin</th>
+                            <th style="width: 12.5%">Insulin Type</th>
+                            <th style="width: 30%">Note</th>
+                            <th style="width: 7.5%"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for entry in entries %}
+                        <tr>
+                            <td>{{ entry.date_added|date:'m/d/y H:i' }}</td>
+                            <td>{{ entry.blood_sugar }}</td>
+                            <td>{{ entry.carbs }}</td>
+                            <td>{{ entry.insulin }}</td>
+                            <td>{{ entry.insulin_type }}</td>
+                            <td>{{ entry.text }}</td>
+                            <td><a href="{% url 'tracker:edit_entry' entry.id %}">edit</a></td>
+                        </tr>
+                        {% empty %} There are no entries for this topic yet. {% endfor %}
+                    </tbody>
+                </table>
             </p>
-            <small>
-                <a href="{% url 'tracker:edit_entry' entry.id %}">edit</a>
-            </small>
         </div>
-
-        <!-- panel -->
-        {% empty %} 
-        There are no entries for this topic yet. 
-        {% endfor %}
+        <div class="container">
+            <a class="btn btn-primary btn-right" href="{% url 'tracker:new_entry' topic.id %}">Add new entry</a>
+        </div>
     </div>
 </main>
 {% endblock content %}

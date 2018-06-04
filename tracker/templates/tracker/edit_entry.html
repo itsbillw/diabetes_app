@@ -2,13 +2,20 @@
 {% load bootstrap4 %}
 
 {% block content %}
-<div class="container" style="margin-top:30px">
-    <p><a href="{% url 'tracker:topic' topic.id %}">{{ topic }}</a></p>
-    <p>Edit entry:</p>
-    <form action="{% url 'tracker:edit_entry' entry.id %}" method='post'>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button name="submit">save changes</button>
-    </form>
+<div class="main text-left">
+    <div class="container" style="margin-top:30px">
+        <h2><a href="{% url 'tracker:topic' topic.id %}">{{ topic }}</a></h2><p></p>
+        <h4>Edit entry from - {{ entry.date_added|date:'M d, Y H:i' }}</h4>
+        <form action="{% url 'tracker:edit_entry' entry.id %}" method='post'>
+            {% csrf_token %}
+             <table class="table table-sm">
+                 <tbody>
+                    {{ form.as_table }}
+                 </tbody>
+             </table>
+            <button name="submit">save changes</button>
+            <a href="{% url 'tracker:topic' topic.id %}">cancel</a>
+        </form>
+    </div>
 </div>
 {% endblock content %}
