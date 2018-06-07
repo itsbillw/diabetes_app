@@ -8,7 +8,7 @@ from .forms import TopicForm, EntryForm
 
 @login_required
 def index(request):
-    """The home page for learning log"""
+    """The home page for tracker"""
     topics = Topic.objects.filter(owner=request.user).order_by('date_added')
     context = {'topics': topics}
     return render(request, 'tracker/index.html', context)
@@ -70,7 +70,6 @@ def new_entry(request, topic_id):
 
     context = {'topic': topic, 'form': form}
     return render(request, 'tracker/new_entry.html', context)
-
 
 @login_required
 def edit_entry(request, entry_id):
