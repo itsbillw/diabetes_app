@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'bootstrap4',
 
     #my apps
+    'data',
     'tracker',
     'users',
 ]

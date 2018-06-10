@@ -23,5 +23,6 @@ urlpatterns = [
     path('tracker/', include('tracker.urls')),
     path('users/', include('users.urls')),
     path('info/', views.info, name='info'),
+    path('data/', include('data.urls')),
     path('', views.index, name='index'),
 ]

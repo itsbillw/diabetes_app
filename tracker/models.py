@@ -18,7 +18,16 @@ class Entry(models.Model):
     blood_sugar = models.IntegerField(blank=True, null=True)
     carbs = models.IntegerField(blank=True, null=True)
     insulin = models.IntegerField(blank=True, null=True)
-    insulin_type = models.CharField(blank=True, null=True, max_length=200)
+    BOLUS = 'Fiasp'
+    BASAL = 'Tresiba'
+    INSULIN_CHOICES = (
+        (BASAL, 'Basal'),
+        (BOLUS, 'Bolus'),
+    )
+    insulin_type = models.CharField(max_length=5,
+                                    choices=INSULIN_CHOICES,
+                                    default=BOLUS,
+                                    )
     date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:
