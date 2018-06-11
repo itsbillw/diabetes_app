@@ -2,13 +2,25 @@
 {% load bootstrap4 %}
 
 {% block content %}
-<div class="container">
-    <p>
-        <a href="{% url 'data:view' %}">View</a>
-    </p>
-    <p>
-        <a href="{% url 'data:upload' %}">Upload</a>
-    </p>
+<div role="main" class="container">
+    <div class="container">
+        <h2>Filtered test import</h2>
+        <p>Top 5 rows of CGMS import</p>
+    </div>
+    <div class="container">
+        <p class="lead">
+            <a href="{% url 'data:upload' %}" class="btn btn-lg btn-secondary">Upload</a>
+        </p>
+    </div>
+    <div class="container">
+        <table>
+            {{ ds1 | safe }}
+        </table>
+    </div>
+    <div class="container">
+        <p class="lead">
+            <a href="{% url 'data:view' %}" class="btn btn-md btn-secondary">View full table</a>
+        </p>
+    </div>
 </div>
-
 {% endblock %}

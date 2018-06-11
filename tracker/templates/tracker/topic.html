@@ -20,6 +20,7 @@
                             <th style="width: 12.5%">Carbs</th>
                             <th style="width: 12.5%">Insulin</th>
                             <th style="width: 12.5%">Insulin Type</th>
+                            <th style="width: 12.5%">Event Type</th>
                             <th style="width: 30%">Note</th>
                             <th style="width: 7.5%"></th>
                         </tr>
@@ -32,6 +33,7 @@
                             <td>{{ entry.carbs }}</td>
                             <td>{{ entry.insulin }}</td>
                             <td>{{ entry.insulin_type }}</td>
+                            <td>{{ entry.event_type }}</td>
                             <td>{{ entry.text }}</td>
                             <td><a href="{% url 'tracker:edit_entry' entry.id %}">edit</a></td>
                         </tr>

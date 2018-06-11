@@ -6,8 +6,16 @@
     <h2>Uploaded data</h2>
 </div>
 <div class="container">
+    <p>
+        <a href="{% url 'data:index' %}">Index</a>
+    </p>
+</div>
+<div class="container">
     <table>
         {{ ds1 | safe }}
     </table>
+</div>
+<div class="container">
+    <a href="{% url 'data:upload' %}">Upload</a>
 </div>
 {% endblock %}

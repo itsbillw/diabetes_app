@@ -24,10 +24,20 @@ class Entry(models.Model):
         (BASAL, 'Basal'),
         (BOLUS, 'Bolus'),
     )
-    insulin_type = models.CharField(max_length=5,
+    insulin_type = models.CharField(max_length=10,
                                     choices=INSULIN_CHOICES,
                                     default=BOLUS,
                                     )
+    MANUAL = 'Manual'
+    AUTO = 'Dexcom'
+    EVENT_CHOICES = (
+        (MANUAL, 'Manual'),
+        (AUTO, 'Auto'),
+    )
+    event_type = models.CharField(max_length=10,
+                                  choices=EVENT_CHOICES,
+                                  default=MANUAL,
+                                  )
     date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:

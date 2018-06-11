@@ -7,7 +7,7 @@
         <h2>Upload data from CGMS</h2>
     </div>
 
-    <form action="{% url 'data:view' %}" method="post" enctype="multipart/form-data">
+    <form action="{% url 'data:upload' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {# bootstrap_form form #}
 
@@ -15,6 +15,22 @@
         <input type="file" name="csv_file" />
         <p></p>
         <button type="submit" value="Upload">Upload</button>
+        {% endbuttons %}
+    </form>
+    <a href="{% url 'data:index' %}">cancel</a>
+</div>
+<div class="container" style="padding-top:30px">
+    <table>
+        {{ ds1 | safe }}
+    </table>
+</div>
+<div class="container" style="padding-top:30px">
+    <form action="{% url 'data:upload' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {# bootstrap_form form #}
+
+        {% buttons %}
+        <button type="submit">View full table</button>
         {% endbuttons %}
     </form>
 </div>
