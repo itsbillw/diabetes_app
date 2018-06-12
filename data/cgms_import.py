@@ -24,8 +24,8 @@ def load_filtered_test():
     return ds1
 
 def save_filtered_upload():
-    ds1 = load_filtered_test()
     conn = sqlite3.connect("db.sqlite3")
+    ds1 = load_filtered_test()
     ds1.to_sql(name='cgms_table', con=conn, index=False, if_exists='replace')
     return ds1
 

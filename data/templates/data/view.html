@@ -7,15 +7,12 @@
 </div>
 <div class="container">
     <p>
-        <a href="{% url 'data:index' %}">Index</a>
+        <a href="{% url 'data:index' %}" class="btn btn-md btn-primary">Index</a>
     </p>
 </div>
 <div class="container">
     <table>
         {{ ds1 | safe }}
     </table>
-</div>
-<div class="container">
-    <a href="{% url 'data:upload' %}">Upload</a>
 </div>
 {% endblock %}

@@ -7,8 +7,14 @@
 <a class="nav-link" href="{% url 'tracker:index' %}">Tracker</a>
 <a class="nav-link active" href="{% url 'data:index' %}">Data</a>
 {% if user %}
-    <a class="nav-link" href="{% url 'users:logout' %}">Log Out</a>
+<a class="nav-link" href="{% url 'users:logout' %}">Log Out</a>
 {% else %}
-    <a class="nav-link" href="{% url 'users:login' %}">Log In</a>
+<a class="nav-link" href="{% url 'users:login' %}">Log In</a>
 {% endif %}
+{% endblock %}
+
+{% block footer %}
+<div class="inner">
+    <p>Tracking app built using Django and <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://github.com/itsbillw">@itsbillw</a>.</p>
+</div>
 {% endblock %}

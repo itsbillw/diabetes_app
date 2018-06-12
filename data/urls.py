@@ -7,4 +7,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('view/', views.view, name='view'),
     path('upload/', views.upload, name='upload'),
+    path('cgms/', views.cgms_data, name='cgms_data'),
 ]

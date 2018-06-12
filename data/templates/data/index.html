@@ -8,8 +8,13 @@
         <p>Top 5 rows of CGMS import</p>
     </div>
     <div class="container">
+        <p>
+            <a href="{% url 'data:cgms_data' %}">CGMS Data</a>
+        </p>
+    </div>
+    <div class="container">
         <p class="lead">
-            <a href="{% url 'data:upload' %}" class="btn btn-lg btn-secondary">Upload</a>
+            <a href="{% url 'data:upload' %}" class="btn btn-md btn-primary">Upload</a>
         </p>
     </div>
     <div class="container">
@@ -17,10 +22,15 @@
             {{ ds1 | safe }}
         </table>
     </div>
-    <div class="container">
-        <p class="lead">
-            <a href="{% url 'data:view' %}" class="btn btn-md btn-secondary">View full table</a>
-        </p>
+    <div class="container" style="padding-top:30px">
+        <form action="{% url 'data:index' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {# bootstrap_form form #}
+
+            {% buttons %}
+            <button class="btn btn-primary" type="submit">View full table</button>
+            {% endbuttons %}
+        </form>
     </div>
 </div>
 {% endblock %}
