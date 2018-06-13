@@ -13,11 +13,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='entry',
             name='event_type',
-            field=models.CharField(choices=[('Manual', 'Manual'), ('Dexcom', 'Auto')], default='Manual', max_length=6),
+            field=models.CharField(choices=[('Manual', 'Manual'), ('Dexcom', 'Auto')], default='Manual', max_length=9),
         ),
         migrations.AlterField(
             model_name='entry',
             name='insulin_type',
-            field=models.CharField(choices=[('Tresiba', 'Basal'), ('Fiasp', 'Bolus')], default='Fiasp', max_length=5),
+            field=models.CharField(choices=[('Tresiba', 'Basal'), ('Fiasp', 'Bolus')], default='Fiasp', max_length=9),
         ),
     ]
