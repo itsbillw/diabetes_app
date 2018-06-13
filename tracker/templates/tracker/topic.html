@@ -10,6 +10,9 @@
         </div>
     </div>
     <div class="my-3 p-3 bg-white rounded box-shadow">
+        <div class="container">
+            <a class="btn btn-primary" href="{% url 'tracker:new_entry' topic.id %}">Add new entry</a>
+        </div>
         <div class="media text-muted pt-3">
             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
                 <table class="table table-sm table-striped">
@@ -35,7 +38,7 @@
                             <td>{{ entry.insulin_type }}</td>
                             <td>{{ entry.event_type }}</td>
                             <td>{{ entry.text }}</td>
-                            <td><a href="{% url 'tracker:edit_entry' entry.id %}">edit</a></td>
+                            <td><a class="btn btn-sm btn-primary" href="{% url 'tracker:edit_entry' entry.id %}">edit</a></td>
                         </tr>
                         {% empty %} There are no entries for this topic yet. {% endfor %}
                     </tbody>

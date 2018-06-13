@@ -13,8 +13,8 @@
                     {{ form.as_table }}
                  </tbody>
              </table>
-            <button name="submit">save changes</button>
-            <a href="{% url 'tracker:topic' topic.id %}">cancel</a>
+            <button class="btn btn-primary" name="submit">save changes</button>
+            <a class="btn btn-primary" href="{% url 'tracker:topic' topic.id %}">cancel</a>
         </form>
     </div>
 </div>
