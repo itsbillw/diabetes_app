@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2cdbaf81-65e3-4cb0-a07c-5edaa17f2d27" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/tracker/migrations/0011_auto_20180610_1753.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/migrations/0011_auto_20180610_1753.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/migrations/0012_auto_20180610_1801.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/migrations/0012_auto_20180610_1801.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,92 +14,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tracker/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#54#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diabetes_app/templates/diabetes_app/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="500.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diabetes_app/templates/diabetes_app/500.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tracker/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/ubuntu_learning/venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-728">
-              <caret line="1040" column="8" selection-start-line="1040" selection-start-column="8" selection-end-line="1040" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="0011_auto_20180610_1753.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="0011_auto_20180610_1753.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/migrations/0011_auto_20180610_1753.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="20" column="116" selection-start-line="20" selection-start-column="116" selection-end-line="20" selection-end-column="116" />
+              <caret line="20" column="127" selection-start-line="20" selection-start-column="127" selection-end-line="20" selection-end-column="127" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="0012_auto_20180610_1801.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tracker/migrations/0012_auto_20180610_1801.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="118" selection-start-line="20" selection-start-column="118" selection-end-line="20" selection-end-column="118" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="0010_auto_20180603_1333.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/migrations/0010_auto_20180603_1333.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="0012_auto_20180610_1801.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tracker/migrations/0012_auto_20180610_1801.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="71" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="71" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -186,6 +126,7 @@
         <option value="$PROJECT_DIR$/tracker/templates/tracker/topic.html" />
         <option value="$PROJECT_DIR$/diabetes_app/templates/diabetes_app/500.html" />
         <option value="$PROJECT_DIR$/tracker/migrations/0011_auto_20180610_1753.py" />
+        <option value="$PROJECT_DIR$/tracker/migrations/0012_auto_20180610_1801.py" />
       </list>
     </option>
   </component>
@@ -737,16 +678,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/migrations/0012_auto_20180610_1801.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/tracker/migrations/0010_auto_20180603_1333.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="71" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="71" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tracker/migrations/0011_auto_20180610_1753.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" column="116" selection-start-line="20" selection-start-column="116" selection-end-line="20" selection-end-column="116" />
+          <caret line="20" column="127" selection-start-line="20" selection-start-column="127" selection-end-line="20" selection-end-column="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/migrations/0012_auto_20180610_1801.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="118" selection-start-line="20" selection-start-column="118" selection-end-line="20" selection-end-column="118" />
         </state>
       </provider>
     </entry>

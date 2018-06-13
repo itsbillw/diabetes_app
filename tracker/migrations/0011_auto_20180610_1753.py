@@ -18,6 +18,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='entry',
             name='insulin_type',
-            field=models.CharField(choices=[('Tresiba', 'Basal'), ('Fiasp', 'Bolus')], default='Fiasp', max_length=9),
+            field=models.CharField(choices=[('Tresiba', 'Basal'), ('Fiasp', 'Bolus')], default='Fiasp', max_length=9, null=True),
         ),
     ]
