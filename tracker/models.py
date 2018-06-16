@@ -38,11 +38,11 @@ class Entry(models.Model):
                                   choices=EVENT_CHOICES,
                                   default=MANUAL,
                                   )
-    date_added = models.DateTimeField(auto_now_add=True)
+    date_added = models.DateTimeField()
 
     class Meta:
         verbose_name_plural = 'entries'
 
     def __str__(self):
         """Return a string representation of the model."""
-        return self.text[:50] + "..."
+        return self.date_added

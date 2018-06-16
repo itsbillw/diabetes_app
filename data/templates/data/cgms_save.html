@@ -1,0 +1,21 @@
+{% extends "data/base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+<main role="main" class="container">
+    <div>
+        <h1>Save upload to Tracker</h1>
+    </div>
+    <div class="container" style="padding-top:30px">
+        <form action="{% url 'data:cgms_save' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+            </table>
+            {% buttons %}
+            <button class="btn btn-primary" type="submit">Upload to Tracker</button>
+            {% endbuttons %}
+        </form>
+    </div>
+</main>
+{% endblock %}

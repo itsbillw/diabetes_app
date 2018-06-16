@@ -11,10 +11,12 @@ class TopicForm(forms.ModelForm):
 class EntryForm(forms.ModelForm):
     class Meta:
         model = Entry
-        fields = ['blood_sugar','carbs','insulin','insulin_type','text']
+        fields = ['blood_sugar','carbs','insulin','insulin_type','text','date_added']
         labels = {'text': 'Notes'}
         widgets = {'blood_sugar': forms.NumberInput()}
         widgets = {'carbs': forms.NumberInput()}
         widgets = {'insulin': forms.NumberInput()}
         widgets = {'insulin_type': forms.Select()}
         widgets = {'text': forms.Textarea(attrs = {'rows': '3'})}
+        widgets = {'carbs': forms.NumberInput()}
+

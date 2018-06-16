@@ -3,6 +3,11 @@
 
 {% block content %}
 <main role="main" class="container">
+    <div class="container">
+        <p>
+            <a href="{% url 'data:cgms_save' %}">CGMS Save</a>
+        </p>
+    </div>
     <div class="my-3 p-3 bg-white rounded box-shadow">
         <div class="media text-muted pt-3">
             <table>
@@ -25,8 +30,8 @@
                     <tbody>
                         {% for entry in entries %}
                         <tr>
-                            <td>{{ entry.Timestamp }}</td>
-                            <td>{{ entry.GlucoseValue }}</td>
+                            <td>{{ entry.date_added }}</td>
+                            <td>{{ entry.blood_sugar }}</td>
                         </tr>
                         {% empty %} There are no entries for this topic yet. {% endfor %}
                     </tbody>
