@@ -1,0 +1,24 @@
+{% extends "tracker/base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+<div class="container">
+    <h2>Uploaded data</h2>
+</div>
+<div class="container">
+    <p>
+        <a href="{% url 'tracker:topics' %}" class="btn btn-md btn-primary">Back to Tracker</a>
+        <a href="{% url 'tracker:upload' %}" class="btn btn-md btn-primary">Upload</a>
+    </p>
+</div>
+<div class="container">
+    <table>
+        {{ ds1 | safe }}
+    </table>
+</div>
+<div class="container" style="padding-top:30px">
+    <p>
+        <a href="{% url 'tracker:cgms_save' %}" class="btn btn-md btn-primary">Save upload to Tracker</a>
+    </p>
+</div>
+{% endblock %}

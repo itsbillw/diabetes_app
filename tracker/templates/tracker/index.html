@@ -9,8 +9,13 @@
             <h4 class="mb-0 text-white lh-100">Diabetes tracker</h4>
         </div>
     </div>
-
     <div class="my-3 p-3 bg-white rounded box-shadow text-left">
+        <div class="container">
+            <p class="lead">
+                <a href="{% url 'tracker:new_topic' %}" class="btn btn-md btn-primary">Add new topic</a>
+                <a href="{% url 'tracker:view' %}" class="btn btn-md btn-primary">CGMS Upload</a>
+            </p>
+        </div>
         {% for topic in topics %}
         <div class="media text-muted pt-3">
             <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
@@ -23,10 +28,6 @@
         <li>No topics have been added yet.</li>
         {% endfor %}
         <div class="container">
-            <small class="d-block text-right mt-3">
-                    <a href="{% url 'tracker:new_topic' %}">Add new topic</a>
-            </small>
-            <p></p>
             <a href="{% url 'tracker:topics' %}">All Topics</a>
         </div>
     </div>

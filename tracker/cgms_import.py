@@ -5,7 +5,7 @@ import sqlite3
 def load_saved_test():
     conn = sqlite3.connect("db.sqlite3")
     try:
-        ds1 = pd.read_sql(sql="select * from temp_table", con=conn)
+        ds1 = pd.read_sql(sql="select * from cgms_table", con=conn)
     except:
         ds1 = pd.DataFrame(np.random.randn(8, 4), index=pd.date_range('1/1/2000', periods=8), columns=['A', 'B', 'C', 'D'])
     return ds1

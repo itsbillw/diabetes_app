@@ -1,0 +1,22 @@
+{% extends "tracker/base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+<div role="main" class="container">
+    <div class="container">
+        <h2>Upload data from CGMS</h2>
+    </div>
+
+    <form action="{% url 'tracker:upload' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {# bootstrap_form form #}
+
+        {% buttons %}
+        <input type="file" name="csv_file" />
+        <p></p>
+        <button type="submit" value="Upload">Upload</button>
+        {% endbuttons %}
+    </form>
+    <a href="{% url 'tracker:index' %}">cancel</a>
+</div>
+{% endblock %}

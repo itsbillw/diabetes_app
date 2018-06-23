@@ -25,4 +25,13 @@ urlpatterns = [
     # Page for editing an event.
     url(r'^edit_entry/(?P<entry_id>\d+)/$', views.edit_entry, name='edit_entry'),
 
+    # Upload CGMS data.
+    path('upload/', views.upload, name='upload'),
+
+    # View CGMS data.
+    path('cgms_view/', views.view, name='view'),
+
+    # Save CGMS data.
+    path('cgms_save/', views.cgms_save, name='cgms_save'),
+
 ]
